@@ -3,14 +3,20 @@ import tw from 'twin.macro'
 
 export const useStyles = makeStyles({
   layout: {
-    ...tw`w-full h-screen flex`
+    ...tw`w-full h-screen flex`,
+    '@media (pointer:none), (pointer:coarse)': {
+      ...tw`h-[-webkit-fill-available]`
+    }
   },
   container: {
     ...tw`absolute top-0 left-0 pb-16 md:pb-0 h-full w-full flex`
   },
   content: {
     ...tw`flex flex-col relative`,
-    'box-shadow': '0 0 1rem rgba(0, 0, 0, 0.6)'
+    'box-shadow': '0 0 1rem rgba(0, 0, 0, 0.6)',
+    '@media (pointer:none), (pointer:coarse)': {
+      'box-shadow': 'none'
+    }
   },
   navbar: {
     "border-color": tokens.colorNeutralBackground2Pressed,
