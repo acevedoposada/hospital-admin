@@ -11,7 +11,7 @@ import {
   PillFilled,
   PillRegular,
 } from '@fluentui/react-icons';
-import { Routes } from './routes';
+import { MainRoutes, Routes } from './routes';
 
 export interface NavItemType {
   Icon: FluentIcon;
@@ -20,7 +20,7 @@ export interface NavItemType {
   route: Routes;
 }
 
-export const navItems: Record<Routes, NavItemType> = {
+export const navItems: Record<MainRoutes, NavItemType> = {
   [Routes.HOME]: {
     title: 'Inicio',
     Icon: HomeRegular,

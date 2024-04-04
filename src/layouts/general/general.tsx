@@ -48,16 +48,18 @@ const General = () => {
           <Sidenav />
         </article>
         <article className={mergeClasses(classes.content, 'flex-auto')}>
-          <nav className={classes.navbar}>
-            <aside className='h-full flex items-center gap-3'>
+          <nav className={mergeClasses(classes.navbar, 'w-full max-w-[100vw]')}>
+            <aside className='h-full flex items-center gap-3 max-w-[85%]'>
               <Avatar
                 size={36}
                 color='cornflower'
                 icon={<NavbarIcon fontSize={24} className='opacity-70' />}
               />
-              <h1 className={classes.title}>{title}</h1>
+              <h1 className={mergeClasses(classes.title, 'truncate')}>
+                {title}
+              </h1>
             </aside>
-            <aside className='h-full'>
+            <aside className='h-full flex'>
               <Popover>
                 <PopoverTrigger>
                   <Button
@@ -71,23 +73,37 @@ const General = () => {
                     )}
                   </Button>
                 </PopoverTrigger>
-                <PopoverSurface>
-                  Content
-                </PopoverSurface>
+                <PopoverSurface>Content</PopoverSurface>
               </Popover>
+              <span className='block md:hidden h-full'>
+                <Button
+                  appearance='transparent'
+                  className='h-full !min-w-[auto] !px-1'
+                >
+                  <Avatar
+                    name='John Doe'
+                    badge={{ status: currentState }}
+                    color='colorful'
+                  />
+                </Button>
+              </span>
               <Menu>
                 <MenuTrigger disableButtonEnhancement>
-                  <Button appearance='transparent' className='h-full'>
-                    <Persona
-                      textPosition='before'
-                      name='John Doe'
-                      presence={{ status: currentState }}
-                      secondaryText={
-                        statesTitles[currentState as keyof typeof statesTitles]
-                      }
-                      avatar={{ color: 'colorful' }}
-                    />
-                  </Button>
+                  <span className='hidden md:block h-full'>
+                    <Button appearance='transparent' className='h-full'>
+                      <Persona
+                        textPosition='before'
+                        name='John Doe'
+                        presence={{ status: currentState }}
+                        secondaryText={
+                          statesTitles[
+                            currentState as keyof typeof statesTitles
+                          ]
+                        }
+                        avatar={{ color: 'colorful' }}
+                      />
+                    </Button>
+                  </span>
                 </MenuTrigger>
                 <MenuPopover>
                   <MenuList>

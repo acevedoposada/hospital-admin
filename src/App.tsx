@@ -1,9 +1,9 @@
-import { RouterProvider } from "react-router-dom"
-import { Suspense } from "react"
+import { RouterProvider } from 'react-router-dom';
+import { Suspense } from 'react';
 
-import { RouterLoader } from "components"
-import ContextEnhancer from "context"
-import router from './routes'
+import { RouterLoader } from 'components';
+import ContextEnhancer from 'context';
+import router from './routes';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <RouterProvider router={router} />
       </Suspense>
     </ContextEnhancer>
-  )
+  );
 }
 
-export default App
+export default App;

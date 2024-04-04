@@ -1,1 +1,1 @@
-export { default as StateSubMenu } from './state-sub-menu'
+export { default as StateSubMenu } from './state-sub-menu';

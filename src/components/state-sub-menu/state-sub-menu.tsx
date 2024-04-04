@@ -1,8 +1,16 @@
-import { Menu, MenuTrigger, MenuItem, MenuPopover, MenuList, PresenceBadge, PresenceBadgeStatus } from "@fluentui/react-components"
-import { States, statesTitles } from "constants/status"
+import {
+  Menu,
+  MenuTrigger,
+  MenuItem,
+  MenuPopover,
+  MenuList,
+  PresenceBadge,
+  PresenceBadgeStatus,
+} from '@fluentui/react-components';
+import { States, statesTitles } from 'constants/status';
 
 interface StateSubMenuProps {
-  currentStatus?: PresenceBadgeStatus
+  currentStatus?: PresenceBadgeStatus;
   onChange: (stateValue: PresenceBadgeStatus) => void;
 }
 
@@ -26,7 +34,7 @@ const StateSubMenu = ({ onChange }: StateSubMenuProps) => {
         </MenuList>
       </MenuPopover>
     </Menu>
-  )
-}
+  );
+};
 
-export default StateSubMenu
+export default StateSubMenu;

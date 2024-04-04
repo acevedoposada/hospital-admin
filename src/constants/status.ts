@@ -6,10 +6,10 @@ export enum States {
 }
 
 export const statesTitles: Record<States, string> = {
-  [States['available']]: "Disponible",
-  [States['busy']]: "Ocupado",
-  [States['away']]: "Ausente",
-  [States['offline']]: "Offline"
-}
+  [States['available']]: 'Disponible',
+  [States['busy']]: 'Ocupado',
+  [States['away']]: 'Ausente',
+  [States['offline']]: 'Offline',
+};
 
 export type StatesType = `${States}`;

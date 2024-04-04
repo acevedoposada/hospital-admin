@@ -21,10 +21,7 @@ const NavItem = ({
 
   const content = (
     <div
-      className={mergeClasses(
-        classes.link,
-        isActive && classes['active-link']
-      )}
+      className={mergeClasses(classes.link, isActive && classes['active-link'])}
     >
       <div className='flex items-center min-w-[18.8rem] w-[18.8rem]'>
         <div className='w-12 h-12 flex flex-col items-center justify-center'>

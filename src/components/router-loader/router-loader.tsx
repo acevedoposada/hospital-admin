@@ -1,4 +1,4 @@
-import { Spinner } from "@fluentui/react-components"
+import { Spinner } from '@fluentui/react-components';
 
 const RouterLoader = () => {
   return (
@@ -6,7 +6,7 @@ const RouterLoader = () => {
       <Spinner />
       <p>Cargando...</p>
     </div>
-  )
-}
+  );
+};
 
-export default RouterLoader
+export default RouterLoader;
